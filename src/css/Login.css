@@ -22,3 +22,10 @@
     width: 50vw;
     align-self: center;
 }
+
+.login-box { 
+    background-image: url("../public/images/info-box.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

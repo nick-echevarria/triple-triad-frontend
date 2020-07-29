@@ -8,7 +8,9 @@ const Login = () => {
             <div className="login-2"/>
             <div className="login-3"/>
             <div className="login-4"/>
-            <div className="login-5"/>
+                <div className="login-5">
+                    <div className="login-box"/>
+                </div>
             <div className="login-6"/>
             <div className="login-7"/>
             <div className="login-8"/>
