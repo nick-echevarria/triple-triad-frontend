@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card { 
+    height: 40%;
+}
+
+.card-image {     
+    width: 90%; 
+    align-self: center;    
+}
+
+.rank-container { 
+    position: absolute;
+    /* width: 10%; */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+.red-card {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 50%, rgb(255, 0, 0) 100%);
+}
+
+.blue-card { 
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,5,255,1) 100%);
+}
