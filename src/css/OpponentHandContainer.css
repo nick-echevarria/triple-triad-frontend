@@ -1,0 +1,13 @@
+.opponent-hand-container { 
+    display: grid;
+  grid-template-columns: repeat(5, 10px);
+  /* grid-template-rows: 400px; */
+}
+
+.opponent-hand-container > * { 
+    border: 1px red solid
+}
+
+/* .opponent-hand-container { 
+    border: 1px red solid
+} */

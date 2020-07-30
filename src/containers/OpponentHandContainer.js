@@ -4,13 +4,10 @@ import { CardContainer as Card } from './CardContainer'
 export const OpponentHandContainer = (props) => {
     return (
         <div className="opponent-hand-container">
-            <div className="opponent-hand">
-                {props.opponentHand.map(card => <Card key={card.id} selectCard={props.selectCard} {...card}/>)}
-            </div>
+            {props.opponentHand.map(card => <Card key={card.id} selectCard={props.selectCard} {...card}/>)}
             <img className="opponent-score" src={`images/score-${props.opponentScore}.png`} alt="player-score"/>
         </div>        
     );
 }
 
 export default OpponentHandContainer;
-

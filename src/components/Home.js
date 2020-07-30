@@ -8,12 +8,12 @@ const Home = () => {
             <div className="home-1">
                 <div className="header-1"></div>
                 <p className="title">Triple Triad</p>
-                <img className="header-2" src={Box} />                
+                <img className="header-2" src={Box} alt="title"/>                
                 <div className="header-3"></div>
             </div>
             <div className="home-2">
                 <div className="menu-1"/>
-                <img className="menu-2" src={Box}/>
+                <img className="menu-2" src={Box} alt="menu"/>
                 <div className="menu-3"/>
             </div>
             <div className="home-3"/>

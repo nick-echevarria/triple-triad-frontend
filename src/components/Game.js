@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PlayerHandContainer from '../containers/PlayerHandContainer';
 import OpponentHandContainer from '../containers/OpponentHandContainer';
 import Board from './Board'
+import '../css/Game.css'
+import '../containers/PlayerHandContainer.js'
+import '../containers/OpponentHandContainer.js'
 
 const allCards = "http://localhost:3000/cards"
 const PLAYER_ONE = "playerOne"
@@ -9,7 +12,8 @@ const PLAYER_TWO = "playerTwo"
 
 const comparisonMap = {
     1: [
-        {position: 2,
+        {
+            position: 2,
             playedCard_value: 'right_value',
             otherCard_value: 'left_value'
         },
@@ -155,7 +159,7 @@ class Game extends Component {
             {position: 7, card: null}, {position: 8, card: null}, {position: 9, card: null}], 
         selectedCard: null, 
         selectedPosition: null, 
-        playerHand: [], 
+        playerHand:[], 
         opponentHand: [], 
         playerScore: 5, 
         opponentScore: 5, 
@@ -280,12 +284,11 @@ class Game extends Component {
                     return board[position]
                 } else if (playedCard[comparisonObj.playedCard_value] === board[position].card[comparisonObj.otherCard_value]) { 
                     return board[position]
-            } 
-                } else { 
-                    return boardPosition
-                }
+                } 
+            } else { 
+                return boardPosition
             }
-        )
+        })
         return flippedPositions
     }
 
@@ -297,7 +300,7 @@ class Game extends Component {
 
             if (matchedPosition) {
                 return matchedPosition                    
-                } else {                
+            } else {                
                 return positionObj
             }
         })
@@ -343,10 +346,22 @@ class Game extends Component {
 
     render() {  
         return (
-            <div className="game-space">                
-                <OpponentHandContainer opponentHand={this.state.opponentHand} selectCard={this.selectCard} opponentScore={this.state.opponentScore}/>
-                <Board board={this.state.board} selectPosition={this.selectPosition}/>
-                <PlayerHandContainer playerHand={this.state.playerHand} selectCard={this.selectCard} playerScore={this.state.playerScore}/>
+            <div className="game-space">
+                <div className="game-space-1"/>
+                <div className="game-space-2"/>
+                <div className="game-space-3"/>
+                <div className="game-space-4">
+                    <OpponentHandContainer opponentHand={this.state.opponentHand} selectCard={this.selectCard} opponentScore={this.state.opponentScore}/>
+                </div>
+                <div className="game-space-5">
+                    <Board board={this.state.board} selectPosition={this.selectPosition}/>
+                </div>
+                <div className="game-space-6">
+                    {/* <PlayerHandContainer playerHand={this.state.playerHand} selectCard={this.selectCard} playerScore={this.state.playerScore}/> */}
+                </div>
+                <div className="game-space-7"/>
+                <div className="game-space-8"/>
+                <div className="game-space-9"/>
             </div>                
         );
     }

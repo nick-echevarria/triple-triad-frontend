@@ -1,46 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.game-space { 
-    display: flex;
-    flex-direction: row;
-    height: 100%; 
-    width: 100%; 
-}
-
-.board-container  { 
-    display: flex; 
-    justify-content: left;
-    flex-wrap: wrap; 
-    width: 100%; 
-    height: 100%;
-}
-
-/* .board-grid { 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    flex-direction: row; 
-    align-items: center;
-    /* height: inherit; 
-    width: inherit;  */
-
-.board-grid { 
+.board-container { 
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
-    
+    height: 100%; 
+    width: 100%;
 }
 
-.board-position { 
-    width: 250px; 
-    height: 250px; 
-    border: red 1px solid
+.board-container > * { 
+    border: 1px red solid
 }
 
-.player-hand-container { 
+/* .player-hand-container { 
    height: 100%; 
    width: 25%; 
 }
@@ -48,5 +17,5 @@
 .opponent-hand-container { 
     height: 100%; 
     width: 25%; 
-}
+} */
 
