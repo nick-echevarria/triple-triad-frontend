@@ -1,21 +1,14 @@
 .board-container { 
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     height: 100%; 
     width: 100%;
+    align-items: center;
+    justify-content: center; 
 }
 
 .board-container > * { 
     border: 1px red solid
 }
 
-/* .player-hand-container { 
-   height: 100%; 
-   width: 25%; 
-}
-
-.opponent-hand-container { 
-    height: 100%; 
-    width: 25%; 
-} */
 

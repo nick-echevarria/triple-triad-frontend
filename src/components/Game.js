@@ -167,6 +167,10 @@ class Game extends Component {
     }    
 
     componentDidMount() { 
+        // fetch all cards 
+        // deal hands
+        // pick starting player
+        // set selected card based on starting player
         this.fetchAllCards();
         this.pickStartingPlayer();
     }
@@ -177,16 +181,6 @@ class Game extends Component {
             .then(allCards => this.setState({ allCards }, () => this.dealHands()))
     }
 
-    pickStartingPlayer = () => { 
-        if (Math.floor(Math.random() * 2) === 0 ) { 
-            this.setState({ currentPlayer: PLAYER_ONE })
-            alert("Welcome to Triple Triad It's Player One's turn!")
-        } else { 
-            this.setState({ currentPlayer: PLAYER_TWO })
-            alert("Welcome to Triple Triad It's Player Two's turn!")
-        }
-    }
-
     dealHands = () => {  
         let allCardsCopy = [...this.state.allCards]
         let playerHand = []
@@ -194,6 +188,7 @@ class Game extends Component {
 
         while (playerHand.length < 5) {
             let newCard = allCardsCopy.splice([Math.floor(Math.random() * allCardsCopy.length)], 1)[0]
+            console.log(newCard)
             playerHand.push(newCard)             
         }    
 
@@ -204,9 +199,19 @@ class Game extends Component {
         
         playerHand.map(card => card.possession = "blue")
         opponentHand.map(card => card.possession = "red")
-
+        
         this.setState({ playerHand, opponentHand })
     }
+
+    pickStartingPlayer = () => { 
+        if (Math.floor(Math.random() * 2) === 0) { 
+            this.setState({ currentPlayer: PLAYER_ONE })
+            alert("Welcome to Triple Triad It's Player One's turn!")
+        } else { 
+            this.setState({ currentPlayer: PLAYER_TWO})
+            alert("Welcome to Triple Triad It's Player Two's turn!")
+        }
+    }    
     
     selectCard = (selectedCard) => { 
         this.setState({ selectedCard })
@@ -304,7 +309,6 @@ class Game extends Component {
                 return positionObj
             }
         })
-        console.log(newBoard)
         return newBoard
     }    
 
@@ -351,13 +355,13 @@ class Game extends Component {
                 <div className="game-space-2"/>
                 <div className="game-space-3"/>
                 <div className="game-space-4">
-                    <OpponentHandContainer opponentHand={this.state.opponentHand} selectCard={this.selectCard} opponentScore={this.state.opponentScore}/>
+                    <OpponentHandContainer opponentHand={this.state.opponentHand} selectCard={this.selectCard} selectedCard={this.state.selectedCard} opponentScore={this.state.opponentScore}/>
                 </div>
                 <div className="game-space-5">
                     <Board board={this.state.board} selectPosition={this.selectPosition}/>
                 </div>
                 <div className="game-space-6">
-                    {/* <PlayerHandContainer playerHand={this.state.playerHand} selectCard={this.selectCard} playerScore={this.state.playerScore}/> */}
+                    <PlayerHandContainer playerHand={this.state.playerHand} selectCard={this.selectCard} selectedCard={this.state.selectedCard} playerScore={this.state.playerScore}/>
                 </div>
                 <div className="game-space-7"/>
                 <div className="game-space-8"/>

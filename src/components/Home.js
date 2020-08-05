@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Home.css'
-import Box from "../public/images/info-box.png"
+import Box from "../images/info-box.png"
 
 const Home = () => {
     return (
@@ -28,5 +28,3 @@ const Home = () => {
 }
 
 export default Home;
-
-

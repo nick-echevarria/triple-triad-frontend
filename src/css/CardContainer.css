@@ -1,25 +1,34 @@
-/* .card { 
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-start;
+.red-hand-card { 
+    height: 0vh;
 }
 
-.card-image {     
-    align-self: center;  
+.blue-hand-card { 
+    height: 0vh;
+}
+
+.red-hand-card.selected-card { 
+    margin-left: 30%;
+}
+
+.blue-hand-card.selected-card { 
+    margin-right: 30%;
+}
+
+.card-image { 
+    width: 100%;
 }
 
 .rank-container { 
     position: absolute;
     display: flex; 
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 18px;
-} */
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
+    margin-left: 17px;
+}
 
-.card { 
-    height: 50px; 
-    width: 50px;
+.rank-container img { 
+    height: 3vh;
 }
 
 .red-card {

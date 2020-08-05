@@ -1,11 +1,14 @@
 import React from 'react';
 import { CardContainer as Card } from './CardContainer'
+import '../css/OpponentHandContainer.css'
 
 export const OpponentHandContainer = (props) => {
     return (
         <div className="opponent-hand-container">
-            {props.opponentHand.map(card => <Card key={card.id} selectCard={props.selectCard} {...card}/>)}
-            <img className="opponent-score" src={`images/score-${props.opponentScore}.png`} alt="player-score"/>
+            {props.opponentHand.map(card => <Card key={card.id} selectCard={props.selectCard} selectedCard={props.selectedCard} {...card} />)}
+            <div className="opponent-score-container">
+                <img className="opponent-score" src={require(`../images/score-${props.opponentScore}.png`)} alt="opponent-score"/>    
+            </div> 
         </div>        
     );
 }
