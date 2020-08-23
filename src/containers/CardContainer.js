@@ -12,7 +12,8 @@ export const CardContainer = (props) => {
         // affinity,
         card_number, 
         possession,
-        selectedCard
+        selectedCard, 
+        played
     } = props
 
     const getCardImage = (cardNumber) => { 
@@ -23,22 +24,22 @@ export const CardContainer = (props) => {
         }
     }    
     
-    const handleCardClick = (selectedCard) => { 
-        props.selectCard(selectedCard);
+    const toggleCursor = (e) => { 
+        console.log(e.currentTarget.parentNode.getElemen)
+        if (e.target.previousSibling.style.display === '') {
+            e.target.previousSibling.style.display = 'block'
+        } else if (e.target.previousSibling.style.display === 'block') { 
+            e.target.previousSibling.style.display = ''
+        }
+    }
+
+    const handleCardClick = (e, selectedCard) => {
+        props.selectCard(selectedCard)
+
     }    
 
-    // const setCardClassName = () => { 
-    //     if (selectedCard === null) { 
-    //         return "card"
-    //     } else if (selectedCard.name === name) { 
-    //         return "card selected-card"
-    //     } else { 
-    //         return "card"
-    //     }
-    // }
-
     return (
-        <div className={selectedCard === null || selectedCard.name !== name ? `${possession}-hand-card` : `${possession}-hand-card selected-card`} onClick={() => handleCardClick(props)}>
+        <div className={selectedCard === null || selectedCard.name !== name ? `${possession}-hand-card` : `${possession}-hand-card selected-card`} onClick={played===true ? null : (e) => {handleCardClick(e, props)}}>
             <div className="rank-container">
                 <img className="top-value" alt="rank" src={require(`../images/rank-${top_value}.png`)} />
                     <div className="middle-values">
@@ -46,6 +47,9 @@ export const CardContainer = (props) => {
                         <img className="right-value" alt="rank" src={require(`../images/rank-${right_value}.png`)}  />              
                     </div>
                 <img className="bottom-value" alt="rank" src={require(`../images/rank-${bottom_value}.png`)} />
+            </div>
+            <div className="cursor-container">
+                <img className="cursor" alt="cursor" src={require(`../images/cursor.png`)} />
             </div>
             <img className={`card-image ${possession}-card`} alt={name} src={getCardImage(card_number)}/>
         </div> 

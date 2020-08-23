@@ -3,11 +3,28 @@
 }
 
 .blue-hand-card { 
-    height: 0vh;
+    height: 0vh;    
+}
+
+.cursor-container { 
+    position: absolute; 
+    height: inherit;
+    display: flex; 
+    align-items: flex-start;
+    margin-top: 100px;  
+    /* display: none; */
+}
+
+.cursor { 
+    width: 5vw;
+    margin-left: -3vw;
+    /* transform: scaleX(-1) */
+    display: none; 
 }
 
 .red-hand-card.selected-card { 
     margin-left: 30%;
+    :nth
 }
 
 .blue-hand-card.selected-card { 
@@ -38,3 +55,5 @@
 .blue-card { 
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,5,255,1) 100%);
 }
+
+

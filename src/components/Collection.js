@@ -4,7 +4,7 @@ import '../css/Collection.css'
 const Collection = () => {
     return (
         <div className="collection-container">
-            Collection Page
+            {props.map( )}
         </div>
     );
 }
