@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Game from './components/Game'
 import Home from './components/Home'
 
+
 function App() {
   return (
     <div className="app-container">
