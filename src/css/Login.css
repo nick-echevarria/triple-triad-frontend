@@ -1,31 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .login-container { 
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../public/images/triple-triad-login-page.png");
-    background-position: center;
+    background-image: url('../images/info-box.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    display: grid; 
-    grid-template-columns: 1fr 2fr 1fr;
+    background-position: center;
+    background-size: cover; 
 }
 
-.login-5 { 
-    content:url("../public/images/triple-triad-logo.png");
-    margin: 0; 
-    padding: 0; 
-    height: 50vh; 
-    width: 50vw;
-    align-self: center;
-}
 
-.login-box { 
-    background-image: url("../public/images/info-box.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+

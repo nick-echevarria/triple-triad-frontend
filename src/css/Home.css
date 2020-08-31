@@ -21,30 +21,24 @@
 
 .home-2 { 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header-2 { 
-    position: relative;
-    top: 30px;
-    content: "Hi";
-
+    display: flex; 
+    align-items: center;
+    justify-content: center;;
 }
 
 .title { 
-    position: absolute;
-    left: 50%; 
     color: white;
-    top: 85px;
-    z-index: 1;
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    z-index: 1;
 }
 
 .menu-2 { 
     height: 100%;
     width: 100%;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
