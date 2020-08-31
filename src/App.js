@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 // import Login from './components/Login'
 import Game from './components/Game'
 import Home from './components/Home'
+import './css/index.css'
 
 
 function App() {
