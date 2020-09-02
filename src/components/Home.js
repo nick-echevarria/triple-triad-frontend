@@ -1,30 +1,30 @@
 import React from 'react';
-import '../css/Home.css'
-import LoginForm from './LoginForm'
-import Box from "../images/info-box.png"
+import Link from 'react-router'
 
-const Home = () => {
+const Home = (props) => {
+
+    function goToCollection() { 
+        props.history.pushState(null, 'login');
+    }
+
     return (
         <div className="home-container">
             <div className="home-1">
                 <div className="header-1"></div>      
-                <div className="header-2">
-                    <img className="title-box" src={Box} alt="title"/>  
-                    <div className="title">Triple Triad</div>                                      
-                </div>
+                <div className="header-2"/>                           
                 <div className="header-3"></div>
             </div>
             <div className="home-2">
-                <div className="menu-1"/>
-                <LoginForm />
-                <div className="menu-3"/>
+                <div className="body-1"/>
+                <div className="body-2"/>
+                <div className="body-3"/>
             </div>
             <div className="home-3">
                 <div className="footer-1"/>      
-                <div className="footer-2">
-                    <div className="footer-sig">Made with love by Nicholas Echevarria</div>
+                <div className="footer-2"/>   
+                <div className="footer-3">
+                    <button type="button" className="Collection" onClick={goToCollection()}>Your Collection</button>
                 </div>    
-                <div className="footer-3"></div>
             </div>
         </div>
     );

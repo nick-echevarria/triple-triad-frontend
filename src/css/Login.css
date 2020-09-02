@@ -1,31 +1,63 @@
-/* * {
-    margin: 0;
-    padding: 0;
-}
-
 .login-container { 
+    display: grid; 
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: black;
     height: 100vh;
     width: 100vw;
-    background-image: url("../public/images/triple-triad-login-page.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid; 
+}
+
+.login-container > * { 
+    border: 1px red solid; 
+}
+
+.login-1 { 
+    display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.login-5 { 
-    content:url("../public/images/triple-triad-logo.png");
-    margin: 0; 
-    padding: 0; 
-    height: 50vh; 
-    width: 50vw;
-    align-self: center;
+.login-1 > * { 
+    border: 1px red solid;
 }
 
-.login-box { 
-    background-image: url("../public/images/info-box.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+.login-2 { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.login-3 { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.login-3 > * { 
+    border: 1px red solid;
+}
+
+.header-2 { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;;
+}
+
+.title { 
+    color: white;
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu-2 { 
+    height: 100%;
+    width: 100%;
+}
+
+.footer-sig { 
+    color: white;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+}

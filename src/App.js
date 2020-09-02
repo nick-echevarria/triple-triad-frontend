@@ -1,9 +1,10 @@
 import React from 'react';
 import './css/App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-// import Login from './components/Login'
 import Game from './components/Game'
 import Home from './components/Home'
+import Login from './components/Login'
+import Collection from './components/Collection'
 import './css/index.css'
 
 
@@ -12,7 +13,9 @@ function App() {
     <div className="app-container">
       <Router>
         <Route component={Game} path='/game' />
-        <Route component={Home} exact path='/' /> 
+        <Route component={Login} exact path='/login' /> 
+        <Route component={Collection} exact path='/collection' /> 
+        <Route component={Home} path='/home' />
         {/* check for logged in user above to render either login or home for path='/' */}
       </Router>
     </div>

@@ -5,6 +5,9 @@
 }
 
 .collection-container { 
-    background-color: grey; 
+    display: flex;
+    background-color: black; 
     font: oblique;
+    height: 100%; 
+    width: 100%;
 }
