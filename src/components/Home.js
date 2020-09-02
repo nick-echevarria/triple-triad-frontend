@@ -19,7 +19,13 @@ const Home = () => {
                 <LoginForm />
                 <div className="menu-3"/>
             </div>
-            <div className="home-3"/>
+            <div className="home-3">
+                <div className="footer-1"/>      
+                <div className="footer-2">
+                    <div className="footer-sig">Made with love by Nicholas Echevarria</div>
+                </div>    
+                <div className="footer-3"></div>
+            </div>
         </div>
     );
 }

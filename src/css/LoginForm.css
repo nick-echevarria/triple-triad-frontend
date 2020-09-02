@@ -1,0 +1,29 @@
+.login-form { 
+
+}
+
+.login-container { 
+    display: flex; 
+    background-image: url('../images/info-box.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.login-ul { 
+    list-style-type: none;
+}
+
+.login-button { 
+    width: 100%;
+    background-color: skyblue;
+}
+
+.new-account-button { 
+    width: 100%;
+    background-color: gold;
+}

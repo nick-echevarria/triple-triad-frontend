@@ -1,22 +1,22 @@
 import React from 'react';
-import '../css/Login.css'
+import '../css/LoginForm.css'
 
 const Login = () => {
     return (
         <div className="login-container">
-            <form action='' method='POST'>
-                <ul>
+            <form className="login-form" action='' method='POST'>
+                <ul className="login-ul">
                     <li>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="user_name"/>
+                        <input type="email" id="email" name="email" placeholder="E-mail"/>
                     </li>
                     <li>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_email"/>
+                        <input type="password" id="password" name="password" placeholder="Password"/>
                     </li>
                     <li>
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message"></textarea>
+                        <button type="button" className="login-button">Log In</button>
+                    </li>
+                    <li>
+                        <button type="button" className="new-account-button">Create Free Account</button>
                     </li>
                 </ul>                         
             </form>
