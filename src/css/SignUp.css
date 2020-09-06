@@ -1,4 +1,4 @@
-.login-container { 
+.signup-container { 
     display: grid; 
     grid-template-rows: 1fr 2fr 1fr;
     background-color: white;
@@ -10,14 +10,14 @@
     background-repeat: no-repeat;
 }
 
-/* .login-1 > * { 
+.signup-1 > * { 
     border: 1px red solid;
 } 
 
-login-container > * { 
+.signup-container > * { 
     border: 1px red solid; 
 }
 
-.login-3 > * { 
+.signup-3 > * { 
     border: 1px red solid;
-} */
+}

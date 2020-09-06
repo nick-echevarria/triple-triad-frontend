@@ -5,9 +5,9 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 class LoginForm extends Component {
     state = {
-        username: "", 
-        email: "", 
-        password: ""
+        newUsername: "", 
+        newEmail: "", 
+        newPassword: ""
     }
 
     handleChange = (e) => { 
@@ -23,8 +23,8 @@ class LoginForm extends Component {
 
     render() {
         return (
-            <div className="login-form-container">
-                <form className="login-form" onSubmit={this.handleSubmit}>
+            <div className="signup-form-container">
+                <form className="signup-form" onSubmit={this.handleSubmit}>
                 <div className="field">
                         <label className="label" htmlFor="label">Enter Your E-mail</label>
                         <div className="control">
