@@ -22,14 +22,21 @@ class Collection extends Component {
     render() {
         return (
             <div className="collection-container">
-                <div className="header" />
-                <div className="card-list"/>
-                <div classname="card-view" />
-                <div className="footer" />
-            </div>
+                <div className="collection-1">
+                    <div className="collection-header-1"/>     
+                    <div className="collection-header-2"/>                           
+                    <div className="collection-header-3"/>
+                </div>
+                <div className="collection-2">
+                    <div className="collection-body-1"/>
+                    <div className="collection-body-2"/>
+                </div>
+                <div className="collection-3">
+                    <div className="collection-footer-1"/>      
+                </div>
+        </div>
         )
     };
 }
 
 export default Collection;
-

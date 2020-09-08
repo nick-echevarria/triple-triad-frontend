@@ -12,19 +12,16 @@
     display: flex; 
     align-items: flex-start;
     margin-top: 100px;  
-    /* display: none; */
 }
 
 .cursor { 
     width: 5vw;
     margin-left: -3vw;
-    /* transform: scaleX(-1) */
     display: none; 
 }
 
 .red-hand-card.selected-card { 
     margin-left: 30%;
-    :nth
 }
 
 .blue-hand-card.selected-card { 

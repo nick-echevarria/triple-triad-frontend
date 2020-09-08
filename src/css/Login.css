@@ -33,7 +33,7 @@
     border: 1px red solid;
 }
 
-.header-2 { 
+.login-header-2 { 
     display: flex; 
     align-items: center;
     justify-content: center;;
@@ -47,7 +47,7 @@
     z-index: 1;
 }
 
-.menu-2 { 
+.login-menu-2 { 
     height: 100%;
     width: 100%;
 }

@@ -1,9 +1,5 @@
-.login-form { 
-    /* height: 500px; 
-    width: 500px; */
-}
 
-.login-container { 
+.login-form-container { 
     display: flex; 
     background-image: url('../images/info-box.png');
     background-repeat: no-repeat;

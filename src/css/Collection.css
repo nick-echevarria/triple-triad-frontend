@@ -5,9 +5,36 @@
 }
 
 .collection-container { 
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
     background-color: black; 
-    font: oblique;
     height: 100%; 
     width: 100%;
+}
+
+.collection-1 { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 3fr;
+    border: 1px solid red;
+}
+
+.collection-2 { 
+    display: grid; 
+    grid-template-columns: 2fr 3fr;
+}
+
+.collection-3 { 
+    border: 1px solid red;
+}
+
+.collection-header-1, .collection-header-2, .collection-header-3 { 
+    border: 1px solid red;
+}
+
+.collection-body-1, .collection-body-2 { 
+    border: 1px solid red;
+}
+
+.collection-container > * { 
+    border: 1px solid red;
 }
