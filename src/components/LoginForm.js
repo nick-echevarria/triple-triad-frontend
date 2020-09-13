@@ -1,27 +1,38 @@
 import React from 'react';
 import '../css/LoginForm.css'
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+import Box from '../images/info-box.png'
 
-const Login = () => {
+const LoginForm = () => {
     return (
         <div className="login-form-container">
+            
             <form className="login-form" action='' method='POST'>
-                <ul className="login-ul">
-                    <li>
-                        <input type="email" id="email" name="email" placeholder="E-mail"/>
-                    </li>
-                    <li>
-                        <input type="password" id="password" name="password" placeholder="Password"/>
-                    </li>
-                    <li>
-                        <button type="button" className="login-button">Log In</button>
-                    </li>
-                    <li>
-                        <button type="button" className="new-account-button">Create Free Account</button>
-                    </li>
-                </ul>                         
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control">
+                        <input type="email" id="email" name="email"/>
+                    </div>
+                </div>     
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input type="password" id="password" name="password"/>
+                    </div>
+                </div> 
+                <br></br>                
+                <div class="field">
+                    <div class="control has-text-centered">
+                        <button class="button login is-link">Login</button>
+                    </div>
+                    <br></br>
+                    <div class="control">
+                        <button class="button is-link has-text-white has-background-warning">Create Free Account</button>
+                    </div>
+                </div>
             </form>
         </div>
     );
 }
 
-export default Login;
+export default LoginForm;
