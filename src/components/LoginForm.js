@@ -9,13 +9,13 @@ const LoginForm = () => {
             
             <form className="login-form" action='' method='POST'>
                 <div class="field">
-                    <label class="label">E-mail</label>
+                    <label class="label has-text-white">E-mail</label>
                     <div class="control">
                         <input type="email" id="email" name="email"/>
                     </div>
                 </div>     
                 <div class="field">
-                    <label class="label">Password</label>
+                    <label class="label has-text-white">Password</label>
                     <div class="control">
                         <input type="password" id="password" name="password"/>
                     </div>

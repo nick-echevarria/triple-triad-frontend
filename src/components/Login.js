@@ -10,7 +10,7 @@ const Login = () => {
                 <div className="login-header-1"></div>      
                 <div className="login-header-2">
                     <img className="title-box" src={Box} alt="title"/>  
-                    <div className="title">Triple Triad</div>                                      
+                    <div className="title is-size-1">Triple Triad</div>                                      
                 </div>
                 <div className="login-header-3"></div>
             </div>

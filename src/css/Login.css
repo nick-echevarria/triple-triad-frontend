@@ -41,7 +41,7 @@
 
 .title { 
     color: white !important;
-    font-size: 50px;
+    font-size: 3rem;
     font-family: 'Open Sans', sans-serif;
     position: absolute;
     z-index: 1;
