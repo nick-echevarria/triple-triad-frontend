@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/Login.css'
 import LoginForm from './LoginForm'
 import Box from '../images/info-box.png'
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 const Login = () => {
     return (
