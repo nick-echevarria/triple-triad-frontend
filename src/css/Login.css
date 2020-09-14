@@ -4,20 +4,24 @@
     background-color: black;
     height: 100vh;
     width: 100vw;
+    background-image: url('../images/ff8-logo.png');
+    background-position: left;
+    background-size: 500px 900px;
+    background-repeat: no-repeat;
 }
 
-.login-container > * { 
+/* .login-container > * { 
     border: 1px red solid; 
-}
+} */
 
 .login-1 { 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.login-1 > * { 
+/* .login-1 > * { 
     border: 1px red solid;
-}
+} */
 
 .login-2 { 
     display: grid;
@@ -29,9 +33,9 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.login-3 > * { 
+/* .login-3 > * { 
     border: 1px red solid;
-}
+} */
 
 .login-header-2 { 
     display: flex; 

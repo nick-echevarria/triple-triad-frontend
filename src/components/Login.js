@@ -3,6 +3,7 @@ import '../css/Login.css'
 import LoginForm from './LoginForm'
 import Box from '../images/info-box.png'
 import 'react-bulma-components/dist/react-bulma-components.min.css';
+// import '../images/ff8-logo.png'
 
 const Login = () => {
     return (
@@ -23,7 +24,7 @@ const Login = () => {
             <div className="login-3">
                 <div className="login-footer-1"/>      
                 <div className="login-footer-2">
-                    <div className="footer-sig">Made with love by Nicholas Echevarria</div>
+                    <div className="footer-sig" href="https://github.com/nick-echevarria">Made with love by Nicholas Echevarria</div>
                 </div>    
                 <div className="login-footer-3"></div>
             </div>
