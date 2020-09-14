@@ -27,6 +27,11 @@
 
 .red-hand-card.selected-card > .cursor-container .cursor { 
     display: block;
+    transform: scaleX(-1);
+}
+
+.red-hand-card.selected-card > .cursor-container { 
+    margin-left: 17%; 
 }
 
 .blue-hand-card.selected-card { 
