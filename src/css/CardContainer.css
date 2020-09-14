@@ -15,17 +15,26 @@
 }
 
 .cursor { 
-    width: 5vw;
+    width: 8vw;
     margin-left: -3vw;
-    display: none; 
+    display: none;
+    z-index: 1;
 }
 
 .red-hand-card.selected-card { 
     margin-left: 30%;
 }
 
+.red-hand-card.selected-card > .cursor-container .cursor { 
+    display: block;
+}
+
 .blue-hand-card.selected-card { 
     margin-right: 30%;
+}
+
+.blue-hand-card.selected-card > .cursor-container .cursor { 
+    display: block;
 }
 
 .card-image { 
@@ -39,6 +48,7 @@
     align-items: center; 
     margin-top: 20px; 
     margin-left: 17px;
+    z-index: 1;
 }
 
 .rank-container img { 

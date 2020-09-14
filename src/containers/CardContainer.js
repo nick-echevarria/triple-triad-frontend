@@ -23,19 +23,9 @@ export const CardContainer = (props) => {
             return require("../images/cards/" + cardNumber + ".png")
         }
     }    
-    
-    const toggleCursor = (e) => { 
-        console.log(e.currentTarget.parentNode.getElemen)
-        if (e.target.previousSibling.style.display === '') {
-            e.target.previousSibling.style.display = 'block'
-        } else if (e.target.previousSibling.style.display === 'block') { 
-            e.target.previousSibling.style.display = ''
-        }
-    }
 
     const handleCardClick = (e, selectedCard) => {
         props.selectCard(selectedCard)
-
     }    
 
     return (
