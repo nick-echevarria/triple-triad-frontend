@@ -13,22 +13,6 @@
     width: inherit;
 }
 
-.login-ul { 
-    list-style-type: none;
-    height: 100%; 
-    width: 100%;
-}
-
-.login-button { 
-    width: 100%;
-    background-color: skyblue;
-}
-
-.new-account-button { 
-    width: 100%;
-    background-color: gold;
-}
-
 input { 
     width: 100%;
 }

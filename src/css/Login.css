@@ -10,16 +10,20 @@
     background-repeat: no-repeat;
 }
 
-/* .login-container > * { 
-    border: 1px red solid; 
-} */
-
 .login-1 { 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
 /* .login-1 > * { 
+    border: 1px red solid;
+} 
+
+login-container > * { 
+    border: 1px red solid; 
+}
+
+.login-3 > * { 
     border: 1px red solid;
 } */
 
@@ -32,10 +36,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-/* .login-3 > * { 
-    border: 1px red solid;
-} */
 
 .login-header-2 { 
     display: flex; 
