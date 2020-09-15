@@ -4,10 +4,12 @@
 }
 
 .cursor-board-position { 
+    height: 100%; 
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center; 
-    border: 1px red solid;
+    border: 1px red solid;     
 }
 
 .position-cursor { 
