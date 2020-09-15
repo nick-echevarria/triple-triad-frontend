@@ -5,6 +5,7 @@ import Board from './Board'
 import '../css/Game.css'
 import '../containers/PlayerHandContainer.js'
 import '../containers/OpponentHandContainer.js'
+import cursorImg from '../images/cursor.png' 
 
 const allCards = "http://localhost:3000/cards"
 const PLAYER_ONE = "playerOne"
@@ -217,10 +218,33 @@ class Game extends Component {
         this.setState({ selectedCard })
     } 
 
+    revealPositionCursor = (selectedPosition) => { 
+        const selectedPositionDiv = document.getElementsByClassName(`position-${selectedPosition}`)[0]
+        selectedPositionDiv.className = `cursor-board-position position-${selectedPosition}`
+
+        const positionCursor = document.createElement('img')
+        positionCursor.className = "position-cursor"
+        positionCursor.src = cursorImg
+
+        
+        selectedPositionDiv.appendChild(positionCursor)
+    }
+
+    removePositionCursor = (selectedPosition) => { 
+        const cursor = document.getElementsByClassName("position-cursor")[0]
+        cursor.remove()
+        
+        document.getElementsByClassName("cursor-board-position")[0].className = `board-position position-${selectedPosition}`
+    }
+
+    // need to make it so that the cursor is removed from the DOM when 
+    // 1. another card OR 2. another board position is selected (think state changes)
+
     selectPosition = (selectedPosition) => { 
         if (this.state.selectedPosition !== selectedPosition && this.state.selectedCard) { 
-            this.setState({ selectedPosition })
+            this.setState({ selectedPosition }, this.revealPositionCursor(selectedPosition))
         } else if (this.state.selectedPosition === selectedPosition && this.state.selectedCard) { 
+            this.removePositionCursor(selectedPosition)
             this.playCard(); 
         }
     }
