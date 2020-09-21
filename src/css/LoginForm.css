@@ -13,6 +13,6 @@
     width: inherit;
 }
 
-input { 
+input, button { 
     width: 100%;
 }

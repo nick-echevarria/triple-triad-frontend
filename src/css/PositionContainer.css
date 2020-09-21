@@ -9,12 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    border: 1px red solid;     
+    /* border: 1px red solid;      */
 }
 
 .position-cursor { 
     height: 5vh; 
     width: 5vw;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     right: 5%;
 }

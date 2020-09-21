@@ -8,7 +8,7 @@
 };
 
 .player-hand-container > * { 
-    border: 1px red solid
+    border: 0px red solid
 }
 
 .player-score-container { 
