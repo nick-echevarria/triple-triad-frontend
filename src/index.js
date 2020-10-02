@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import 'bulma/css/bulma.css';
 import * as firebase from 'firebase';
+import "firebase/auth"
 
 var firebaseConfig = {
   apiKey: "AIzaSyCdeI7Ad_GH1PmRpBa_L4QQDbzOVH56dJI",
