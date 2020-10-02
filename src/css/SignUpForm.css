@@ -1,0 +1,18 @@
+
+.login-form-container { 
+    display: flex; 
+    background-image: url('../images/info-box.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    height: inherit; 
+    width: inherit;
+}
+
+input, button { 
+    width: 100%;
+}
