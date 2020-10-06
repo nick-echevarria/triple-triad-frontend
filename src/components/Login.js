@@ -3,7 +3,7 @@ import '../css/Login.css'
 import LoginForm from './LoginForm'
 import Box from '../images/info-box.png'
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-// import '../images/ff8-logo.png'
+import '../images/ff8-logo.png'
 
 const Login = () => {
     return (
