@@ -278,47 +278,51 @@ class Game extends Component {
         }
     }  
 
-    compareCardValues(newBoard) {
-        let board = newBoard
-        let playedCard = this.state.selectedCard
-        let selectedPosition = this.state.selectedPosition        
+    compareCardValues(newBoard) { //passing an argument of the newBoard's configuration, after having played a card
+        let board = newBoard //setting the new board to the variable board
+        let playedCard = this.state.selectedCard //setting the player selected card to variable playedCard 
+        let selectedPosition = this.state.selectedPosition //setting the player selected card to variable playedCard         
 
         // eslint-disable-next-line 
-        let flippedPositions = comparisonMap[selectedPosition].map(comparisonObj => {
-            let position = comparisonObj.position - 1
-            let boardPosition = board[position]
+        let flippedPositions = comparisonMap[selectedPosition].map(comparisonObj => { //mapping through comparisonMap to obtain necessary information for comparison 
+            let position = comparisonObj.position - 1 //adjusting for positioning
+            let boardPosition = board[position] //setting current boardPosition to the positon variable
                 
-            if (boardPosition.card) {
+            if (boardPosition.card) {//if the boardPosition indicated in comparisonMap is not null
                 if (playedCard[comparisonObj.playedCard_value] === "A" && board[position].card[comparisonObj.otherCard_value] <= 9 && playedCard.possession !== board[position].card.possession) {
-                    let positionClone = { position: board[position]["position"] } // {position: 9}
-                    const card = board[position]["card"] // {position: 9, card: {all of the key/values}
-                    let cardClone = card.possession === "blue" ? { ...card, possession: "red" } : { ...card, possession: "blue" } //  to change pos value
-                    positionClone.card = cardClone;
+                    //and if the selected card's value is "A" AND the other card's card value less than or equal to 9 AND that card's possession is NOT the same as playedCard
+                    let positionClone = { position: board[position]["position"] } // make a clone of the position to end up with {position: 9}
+                    const card = board[position]["card"] // add the card's properties to end up with {position: 9, card: {all of the key/values}
+                    let cardClone = card.possession === "blue" ? { ...card, possession: "red" } : { ...card, possession: "blue" }
+                    // change color to opposite color to show possession change from blue to red or vice versa
+                    positionClone.card = cardClone; //add that card to the position
 
-                    this.calculateScore(positionClone)
+                    this.calculateScore(positionClone) //calculates score
                     
-                    return positionClone                    
+                    return positionClone //returns position to later modify Board state with
+                    
                 } else if (playedCard[comparisonObj.playedCard_value] > board[position].card[comparisonObj.otherCard_value] && playedCard.possession !== board[position].card.possession) {
-                    let positionClone = { position: board[position]["position"] } // {position: 9}
-                    const card = board[position]["card"] // {position: 9, card: {all of the key/values}
-                    let cardClone = card.possession === "blue" ? { ...card, possession: "red" } : { ...card, possession: "blue" } //  to change pos value
+                    let positionClone = { position: board[position]["position"] } 
+                    const card = board[position]["card"] 
+                    let cardClone = card.possession === "blue" ? { ...card, possession: "red" } : { ...card, possession: "blue" }
                     positionClone.card = cardClone;
 
                     this.calculateScore(positionClone)
                     
                     return positionClone
+
                 } else if (playedCard[comparisonObj.playedCard_value] > board[position].card[comparisonObj.otherCard_value] && playedCard.possession === board[position].card.possession) {
-                    return board[position]
+                    return board[position] // return same position if nothing above is true
                 } else if (playedCard[comparisonObj.playedCard_value] < board[position].card[comparisonObj.otherCard_value]) { 
-                    return board[position]
+                    return board[position] // return same position if nothing above is true
                 } else if (playedCard[comparisonObj.playedCard_value] === board[position].card[comparisonObj.otherCard_value]) { 
-                    return board[position]
+                    return board[position] // return same position if nothing above is true
                 } 
             } else { 
                 return boardPosition
             }
         })
-        return flippedPositions
+        return flippedPositions //returns new board with all flipped positions to modify Board state with
     }
 
     updateBoard = (newestBoard) => {
